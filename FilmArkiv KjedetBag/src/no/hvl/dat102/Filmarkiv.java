@@ -1,6 +1,7 @@
 package no.hvl.dat102;
 
 import no.hvl.dat102.Film.Sjanger;
+import no.hvl.data102.Film;
 import no.hvl.data102.adt.FilmarkivADT;
 
 public class Filmarkiv<F> implements FilmarkivADT<F> {
@@ -94,7 +95,7 @@ public class Filmarkiv<F> implements FilmarkivADT<F> {
 		int ant = 0;
 	     for (int i = 0; i < filmer.length ; i++) {
 	    	 if (filmer[i].equals(sjanger)) {
-	    		 ant = filmer.length;
+	    		 ant++;
 	    	 }
 	     }
 	     
@@ -110,8 +111,13 @@ public class Filmarkiv<F> implements FilmarkivADT<F> {
 
 	@Override
 	public String skrivut(Film film) {
-		// TODO Auto-generated method stub
-		return null;
+		
+			return "Produsent: " + film.getProdusent() + "/n" +
+		           "Tittel: " + film.getTittel() + "/n" +
+					"Lansering: " + film.getLansering() + "/n" +
+		           "Selskap: " + film.getSelskap() + "/n" + 
+					"Sjange: " + film.getSjanger();
+		
 	}
 	
 	

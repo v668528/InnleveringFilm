@@ -1,6 +1,6 @@
 package no.hvl.dat102;
 
-
+import no.hvl.data102.Film;
 
 public class Film {
 
@@ -76,6 +76,13 @@ public static void setSjanger(Sjanger sjanger) {
 	Film.sjanger = sjanger;
 }
  
+public String skrivut(Film film) {
+	return "Produsent: " + film.getProdusent() + "/n" +
+           "Tittel: " + film.getTittel() + "/n" +
+			"Lansering: " + film.getLansering() + "/n" +
+           "Selskap: " + film.getSelskap() + "/n" + 
+			"Sjange: " + film.getSjanger();
+}
 
 @Override
 public boolean equals(Object andre) {

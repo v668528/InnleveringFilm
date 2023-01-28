@@ -25,9 +25,7 @@ public class Tekstgrensesnitt {
 	// vise en film med alle opplysninger på skjerm (husk tekst for sjanger)
 	public void visFilm(Film film) {
 		
-		FilmarkivADT<Film> filma = new Filmarkiv<>(5);
-		
-		film.toString();
+		film.skrivut(film);
 		
 	}
 
